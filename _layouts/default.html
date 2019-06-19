@@ -12,23 +12,16 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.url }}" />
 
-    <!-- Layout: Bootstrap -->
-    <link rel="stylesheet" href="{{ '/bootstrap/css/bootstrap.min.css' | prepend: site.baseurl }}">
-    <script src="{{'/bootstrap/js/bootstrap.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-
     <!-- Syntax highlight: Prism.js -->
     <link rel="stylesheet" href="{{ '/js/prism.css' | prepend: site.baseurl }}">
     <script src="{{'/js/prism.js' | prepend: site.baseurl }}"></script>
 
-    <!-- Fancybox (external) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- Layout: Bootstrap -->
+    <!-- <link rel="stylesheet" href="{{ '/bootstrap/css/bootstrap.min.css' | prepend: site.baseurl }}"> -->
+    <!-- <script src="{{'/bootstrap/js/bootstrap.min.js' | prepend: site.baseurl }}" type="text/javascript"></script> -->
 
     <!-- Custom styles (last, overrides stuff from bootstrap) -->
-    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}"> -->
 
   </head>
 
@@ -41,8 +34,6 @@
     </div>
 
     <!-- End-of-body scripts -->
-    <!-- Smart underline -->
-    <script src="{{'/js/smart-underline.js' | prepend: site.baseurl }}" type="text/javascript"></script>
     <!-- MathJax -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["TeX"]  },
