@@ -1,0 +1,134 @@
+/**
+* header
+*/
+.homepage {
+  section {
+    margin-bottom: 0.25em;
+    padding-bottom: 1em;
+    border-bottom: 2px dashed #eee;
+  }
+  h2 {
+    margin: 0.8em 0 0.25em;
+    color:#666;
+    font-size: 110%;
+  }
+  #misc h2 {
+    margin-top: 1.5em;
+  }
+  #misc h2:first-child {
+    margin-top: 0.5em;
+  }
+  ul {
+    margin: 0;
+    list-style-type: none;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  section#stuff {
+    a:hover img {
+      opacity: 0.5;
+    }
+  }
+}
+.site-header {
+  padding-top: 0.25em;
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
+  position: relative;
+}
+.site-title {
+  line-height:200%;
+  font-size: 200%;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-variant:$header-font-variant;
+  &,
+  &:visited {
+    color: $site-title-color;
+  }
+  &:hover,
+  &:visited:hover {
+    text-decoration: none;
+    color: lighten($site-title-color, 25%);
+  }
+}
+.site-nav {
+  line-height:400%;
+  font-size: 100%;
+  font-family: $base-font-family;
+  float: right;
+  .page-link {
+    line-height: $base-line-height;
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+    &.page-link-active {
+      text-decoration:underline;
+    }
+  }
+}
+/**
+* main
+*/
+.site-main {
+  padding: 1em 0;
+}
+.site-footer {
+  color: $footer-text;
+  font-size: 80%;
+  margin: 4em 0 0;
+  padding: 1em 0;
+  ul {
+    list-style-type:none;
+    &.contact-list {text-align:right;}
+    &.social-media-list {text-align:left;}
+    li {display: inline-block;}
+    &.contact-list,
+    &.social-media-list {
+      list-style: none;
+      margin-left: 0;
+      img, svg {
+          margin-right: 0.2em;
+      }
+      &#nowplay-currentread li {
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $footer-icon-color;
+      }
+      // nowplaying animation
+      @keyframes nowplaying {
+          0%, 100% {fill: $footer-icon-color;}
+          50% {fill: $footer-icon-pulse;}
+      }
+      li.nowplaying path {
+          animation: nowplaying 2.5s ease-out infinite;
+      }
+    }
+  }
+}
+.news-date {
+  color:#666;
+  text-align:left;
+}
+.news-content {
+
+}
+.avatar {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  max-width: 250px;
+  width: 100%;
+}
+table.publications-table {
+  font-size: 100%;
+  margin: 1em 0;
+  td {
+    width: 50%;
+    padding: 0.25em 0.5em;
+  }
+}

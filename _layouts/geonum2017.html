@@ -1,0 +1,64 @@
+---
+layout: default
+---
+{% assign course = site.data.geonum2017 %}
+
+{% assign date = page.date %}
+{% assign title = page.title %}
+{% assign url = page.url %}
+{% assign type = "TP" %}
+{% assign hstyle = "1" %}
+
+<div class="row">
+
+  <!-- TOP: COURSE NEWS -->
+  <div class="col-xs-12">
+  {% assign allnews = course.news | sort: 'date' | reverse %}
+  {% for news in allnews limit:1 %}
+    <div class="teaching-{{ news.type }}">
+      {{ news.text }}
+    </div>
+  {% endfor %}
+  </div>
+
+  <!-- SIDENAV: SYLLABUS -->
+  <div class="col-xs-12 col-md-3 col-md-push-9">
+    <div class="syllabus-wrapper">
+      {% capture nowunix %}{{'now' | date: '%s' | plus : 259200 }}{% endcapture %}
+      <h2><a href="{{ site.url }}">.geonum2017</a></h2>
+      <ol class="syllabus">
+    {% for class in course.syllabus %}
+      {% unless class.break or class.nolink %}
+        {% capture classtime %}{{class.date | date: '%s'}}{% endcapture %}
+        <li{% if class.break %} class="break"{% endif %}>
+          {% if classtime < nowunix %}<a href="{{ type | downcase }}{{ class.number }}.html">{% endif %}
+            {{ class.short }}
+          {% if classtime < nowunix %}</a>{% endif %}
+        </li>
+      {% endunless %}
+    {% endfor %}
+      </ol>
+    </div>
+  </div>
+
+  <!-- MAIN: TP CONTENT -->
+  <div class="col-xs-12 col-md-9 col-md-pull-3">
+
+    <article class="single travauxpratiques post geonum2017">
+      <!-- HEADING -->
+      <h{{ hstyle }} class="post-title">
+        <a href="{{ url | prepend: site.baseurl }}">{{ title }}</a>
+      </h{{ hstyle }}>
+
+      <!-- META -->
+      <div class="meta">
+          <span class="date">{{ date | date: "%e %B %Y" }}</span>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+          {{ content }}
+      </div>
+    </article>
+  </div>
+</div>

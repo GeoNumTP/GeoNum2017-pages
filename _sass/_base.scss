@@ -1,0 +1,113 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: $text-color;
+  background-color: $background-color;
+  font-size:   $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+pre.highlight {
+  font-size: 1.8rem;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+figure > img {
+  display: block;
+}
+ul, ol {
+  margin-left: $spacing-unit;
+}
+li {
+  > ul,
+  > ol {
+     margin-bottom: 0;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-variant:$header-font-variant;
+}
+h1 {
+  font-size: $h1-size;
+  margin: $h1-margin;
+  color: $h1-color;
+  letter-spacing: $h1-letter-spacing;
+}
+h2 {
+  font-size: $h2-size;
+  margin: $h2-margin;
+  color: $h2-color;
+  letter-spacing: $h2-letter-spacing;
+}
+h3 {
+  font-size: $h3-size;
+  margin: $h3-margin;
+  color: $h3-color;
+  letter-spacing: $h3-letter-spacing;
+}
+h4 {
+  font-size: $h4-size;
+  margin: $h4-margin;
+  color: $h4-color;
+  letter-spacing: $h4-letter-spacing;
+}
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:visited {
+    color: $visited-color;
+  }
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    path {
+      fill: $footer-icon-color;
+    }
+  }
+}
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: lighten($text-color, 18%);
+  border-collapse: collapse;
+  border: 1px solid $grey-color-light;
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($grey-color-light, 6%);
+    }
+  }
+  th, td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+  th {
+    background-color: lighten($grey-color-light, 3%);
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+  td {
+    border: 1px solid $grey-color-light;
+  }
+}
