@@ -6,6 +6,10 @@ date:   2017-02-03
 ---
 [casteljau-gif]: https://upload.wikimedia.org/wikipedia/commons/0/0b/BezierCurve.gif
 
+## Code
+* [general instructions](https://github.com/GeoNumTP/GeoNum2017#géométrie-numérique-spring-2017)  
+* [TP1 instructions](https://github.com/GeoNumTP/GeoNum2017/tree/master/TP1#tp1--bézier-curves-de-casteljaus-algorithm)  
+
 ## Bézier curves
 A degree $n$ [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) takes the form
 
@@ -64,10 +68,6 @@ $$
 
 {:.imgCaption}
 Animation of the De Casteljau's algorithm for a quintic curve ($n=5$).
-
-## Code
-* [general instructions](https://github.com/GeoNumTP/GeoNum2017#géométrie-numérique-spring-2017)  
-* [TP1 instructions](https://github.com/GeoNumTP/GeoNum2017/tree/master/TP1#tp1--bézier-curves-de-casteljaus-algorithm)  
 
 ## ToDo
 
